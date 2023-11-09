@@ -25,7 +25,7 @@
             }
 
             body {
-                background: url(./assets/snow.png), url(./assets/secret.png), url(./assets/snow.png), radial-gradient(#eeeeee, #cccccc);
+                background: url(./assets/snow.png), url(./assets/secret.png), url(./assets/snow.png), radial-gradient(#999999, #eeeeee);
                 background-repeat: repeat, no-repeat, repeat, no-repeat;
 
                 animation-name: snow;
@@ -73,12 +73,12 @@
 
                 background: repeating-linear-gradient(
                     45deg,
-                    #5CC48A,
-                    #5CC48A 30px,
+                    darkred,
+                    darkred 30px,
                     #FFFFFF 30px,
                     #FFFFFF 60px,
-                    #EF3D3D 60px,
-                    #EF3D3D 90px,
+                    #CCCCCC 60px,
+                    #CCCCCC 90px,
                     #FFFFFF 90px,
                     #FFFFFF 120px
                 );
@@ -123,6 +123,12 @@
                 margin-top: 40px;
             }
 
+            #signoff {
+                text-transform: lowercase;
+                font-style: italic;
+                color: darkred;
+                font-family: 'Times New Roman', Times, serif;
+            }
         </style>
 
         <script>
@@ -164,7 +170,7 @@
                         </script>
                     </div>
 
-                    <div class="title">Merry Christmas!</div>
+                    <div id="signoff" class="title">Merry Christmas!</div>
 
                 </div>
             </div>
