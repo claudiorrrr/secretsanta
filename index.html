@@ -161,40 +161,43 @@
 
             <div class="part" style="overflow-y: auto">
                 <div class="instructions">
-                    <h1 class="headline">Secret Santa Generator</h1>
-                    <p>A straightforward <a href="https://github.com/andybrown/secretsanta">open-source</a> tool to help you generate your secret santa pairings.</p>
-                    <p>In the most common case (no exclusion rules, pair each guest with another at random), enter the name of your guests one line at a time. Once done, press "generate" and you're all set: send the generated links to your guests (by mail, chat, whatever floats your boat) and their pairing will be revealed to them (and only them) once they open the link.</p>
-                    <h2 class="headline">Where does this tool come from?</h2>
-                    <p><a href="https://github.com/arcanis/secretsanta">https://github.com/arcanis/secretsanta</a></p>
+                    <h1 class="headline">Generador de amigo secreto</h1>
+                    <p>Esta es una sencilla herramienta <a href="https://github.com/claudiorrr/secretsanta">open-source</a> que ayuda a hacer pares para el amigo secreto navideño.</p>
+                    <p>En el caso más común (donde no tengas reglas de exclusión), ingresa el nombre de tus invitados una línea a la vez. Una vez hecho, presiona "generar" y estarás listo: envía los enlaces generados a tus invitados (por correo, chat, lo que prefieras) y su emparejamiento sólo se le mostrará a ellos (y solo a ellos) una vez que abran el enlace.</p>
+                    <h2 class="headline">De dónde viene esta herramienta?</h2>
+                    <p>La versión original en inglés es <a href="https://github.com/andybrown/secretsanta>">de este buen muchacho</a>, siendo a su vez una adaptación de <a href="https://github.com/arcanis/secretsanta">este otro</a> que me ha aliviado cada navidad desde hace un par de años. Este año decidí traducirlo y agregarle un par de cosas.</p>
                 </div>
             </div>
 
             <form id="form" class="part">
                 <textarea id="input" class="input" autofocus></textarea>
-                <button type="submit" class="generate">Generate!</button>
+                <button type="submit" class="generate">Armar parejas!</button>
                 <div id="result" class="result none"></div>
             </form>
 
         </div>
 
         <script id="input-placeholder" type="text/placeholder">
-            # You can add a participant by adding a new line
-            Winston
-
-            # You can add some details if you want to, using parentheses after the name
-            Nick (the bartender)
-
-            # You can prevent someone from being paired with someone else
-            Nick !Jess
-            Winson !Schmidt
-
-            # You can also exclude someone from being paired with multiple people
-            # Careful: too many exclusion rules can make your secret santa less interesting!
-            Coach !Winston !Nick (the bartender)
-
-            # You can also cheat a bit and force someone to be paired with another
-            CeCe (the model) =Jess (the principal)
-
+            # Agrega a cada participante en una nueva línea
+            Gabriel
+            
+            # Si quieres, puedes agregar detalles usando paréntesis después del nombre
+            Juan (el conserje)
+            
+            # Puedes evitar que alguien le toque regalar a otra persona 
+            # En este ejemplo, a Juan nunca le va a tocar Alejandra ni a Sofía le va a tocar a Mario.
+            Juan !Alejandra
+            Sofía !Mario
+            
+            # También puedes excluir a alguien de que le toque regalar a varias personas
+            # Ojo: Si pones demasiadas reglas de exclusión pueden hacer que tu amigo secreto sea mucho menos entretenido
+            # En este ejemplo, Sofía no va a quedar emparejada ni con Mario ni con Juan (el conserje)
+            Sofía !Mario !Juan (el conserje) 
+            
+            # Y si quieres hacer trampa, puedes forzar que alguien le regale a otro
+            # en este ejemplo, Sofía va a quedar forzadamente emparejada con Alejandra
+            Sofía =Alejandra
+            
             ...
         </script>
 
